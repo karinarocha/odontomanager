@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Usuários</h1>
+    <a href="/cadastrarUsuario"><button type="" class="btn-cadastrar">
+            <i class="fa fa-plus-circle"></i>Cadastrar</button>
+    </a>
+<br>
+
+{{>_msg}}
+<br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Login</th>
+            <th>Tipo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each usuarios}}
+        <tr>
+            <td>{{nome}}</td>
+            <td>{{login}}</td>
+            <td>{{tipo}}</td>
+            <td class="text-center">
+                <a href="/delet-cadastrarUsuarios/{{_id}}">
+                    <button type="a" class="btn-excluir">Excluir</button>
+                </a>
+                <a href="/edit-cadastrarUsuarios/{{_id}}">
+                    <button type="a" class="btn-editar">Editar</button>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>

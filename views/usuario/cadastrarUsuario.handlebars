@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Cadastro de Usuário</h1>
+    <br>
+    <form action="/add-cadUsuario" method="POST">
+        <div class="row">
+            <div class="col-md-5">
+                <label for="usuario">Nome:<span class="text-danger">*</span></label>
+                <input name="nome" class="form-control" required>
+            </div>
+            <div class="col-md-2">
+                <label for="login_usuario">Login:<span class="text-danger">*</span></label>
+                <input name="login"class="form-control" required>
+            </div>
+             <div class="col-md-2">
+                <label for="senha">Senha:<span class="text-danger">*</span></label>
+                <input name="senha" type="password" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+                <label for="tipo">Tipo:<span class="text-danger">*</span></label>
+                <select name="tipo" id="tipo" class="form-control" required>
+                    <option>Administrador</option>
+                    <option>Dentista</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn-formulario">Salvar</button>
+    </form>
+</div>

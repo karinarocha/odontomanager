@@ -1,0 +1,29 @@
+<div class="container-login">
+    <div class="login-area">
+        <form method="POST" action="/login">
+        {{>_msg}}
+            <img src="/images/avatar.svg">
+            <h2>Odonto<span>Manager</span></h2>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="div">
+                    <h5>Nome</h5>
+                    <input type="text" class="input" name="login" id="nome">
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i">
+                    <i class="fa fa-lock"></i>
+                </div>
+                <div class="div">
+                    <h5>Senha</h5>
+                    <input type="password" class="input" name="senha" id="senha">
+                </div>
+            </div>
+            <a href="#">Esqueceu a senha?</a>
+            <input type="submit" class="btn-login">
+        </form>
+    </div>
+</div>

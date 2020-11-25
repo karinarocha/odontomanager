@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Pacientes</h1>
+    <a href="/cadastrarPacientes"><button type="" class="btn-cadastrar">
+            <i class="fa fa-plus-circle"></i>Cadastrar</button>
+    </a>
+<br>
+
+{{>_msg}}
+<br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Sexo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each cadPaciente}}
+        <tr>
+            <td>{{nome}}</td>
+            <td>{{idade}}</td>
+            <td>{{sexo}}</td>
+            <td class="text-center">
+                <a href="/delet-cadastrarPacientes/{{_id}}">
+                    <button type="a" class="btn-excluir">Excluir</button>
+                </a>
+                <a href="/edit-cadastrarPacientes/{{_id}}">
+                    <button type="a" class="btn-editar">Editar</button>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>

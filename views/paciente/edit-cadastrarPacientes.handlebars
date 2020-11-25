@@ -1,0 +1,82 @@
+<div class="container">
+    <h1>Editar Cadastro de Paciente</h1>
+    <br>
+    <form action="/update-cadPaciente" method="POST">
+        <input type="hidden" name="id" value="{{cadPaciente._id}}">
+        <div class="row">
+            <div class="col-md-9">
+                <label for="Nome">Nome:<span class="text-danger">*</span></label>
+                <input name="nome" type="nome" class="form-control" value="{{cadPaciente.nome}}">
+            </div>
+            <div class="col-md-3">
+                <label for="sexo">Sexo:<span class="text-danger">*</span></label>
+                <select name="sexo" id="sexo" class="form-control" value="{{cadPaciente.sexo}}">
+                    <option selected>Feminino</option>
+                    <option>Masculino</option>
+                    <option>Outros</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="cpf">CPF:<span class="text-danger">*</span></label>
+                <input name="cpf" type="text" class="form-control" placeholder="000.000.000-00" value="{{cadPaciente.cpf}}">
+            </div>
+            <div class="col-md-3">
+                <label for="rg">RG:<span class="text-danger">*</span></label>
+                <input name="rg" type="text" class="form-control" placeholder="0000000-0" value="{{cadPaciente.rg}}">
+            </div>
+            <div class="col-md-3">
+                <label for="idade">Idade:<span class="text-danger">*</span></label>
+                <input name="idade" id="idade" class="form-control" value="{{cadPaciente.idade}}">
+            </div>
+            <div class="col-md-3">
+                <label for="data">Data de Nascimento:<span class="text-danger">*</span></label>
+                <input name="dataDeNascimento" type="date" id="date" class="form-control" value="{{formatDate cadPaciente.dataDeNascimento}}">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-9">
+                <label for="email">Email:</label>
+                <input name="email" type="email" class="form-control" value="{{cadPaciente.email}}">
+            </div>
+            <div class="col-md-3">
+                <label for="telefone">Telefone:<span class="text-danger">*</span></label>
+                <input name="telefone" type="telefone" class="form-control" placeholder="(00) 00000-0000" value="{{cadPaciente.telefone}}">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="cep">CEP:<span class="text-danger">*</span></label>
+                <input name="cep" type="text" class="form-control" placeholder="00000-000" value="{{cadPaciente.cep}}">
+            </div>
+            <div class="col-md-3">
+                <label for="logradouro">Logradouro:<span class="text-danger">*</span></label>
+                <input name="logradouro" type="text" class="form-control" value="{{cadPaciente.logradouro}}">
+            </div>
+            <div class="col-md-3">
+                <label for="bairro">Bairro:<span class="text-danger">*</span></label>
+                <input name="bairro" type="text" class="form-control" value="{{cadPaciente.bairro}}">
+            </div>
+            <div class="col-md-2">
+                <label for="cidade">Cidade:<span class="text-danger">*</span></label>
+                <input name="cidade" type="text" class="form-control" value="{{cadPaciente.cidade}}">
+            </div>
+            <div class="col-md-2">
+                <label for="inputEstado">Estado:<span class="text-danger">*</span></label>
+                <select name="uf" id="inputEstado" class="form-control" value="{{cadPaciente.uf}}">
+                    <option selected>AM</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <br>
+        <button type="submit" class="btn-formulario">Salvar</button>
+        <br>
+        <br>
+    </form>
+</div>

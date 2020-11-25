@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>Editar Consulta</h1>
+    <br>
+    <form action="/update-cadConsulta" method="POST">
+    <input type="hidden" name="id" value="{{cadConsulta._id}}">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="nome">Paciente:<span class="text-danger">*</span></label>
+                <select name="cadPaciente" id="cadPaciente" class="form-control">
+                    <option value="{{cadConsulta.cadPaciente._id}}">{{cadConsulta.cadPaciente.nome}}</option>
+                    {{#each cadPacientes}}
+                        <option value="{{_id}}">{{nome}}</option>
+                    {{else}}
+                        <option value="">Nenhum paciente encontrado</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="tipoServico">Tipo de Serviço:<span class="text-danger">*</span></label>
+                <select name="cadServico" id="cadServico" class="form-control" value="{{cadConsulta.cadServico}}">
+                    <option>Clareamento</option>
+                    <option>Profilaxia</option>
+                    <option>Implante</option>
+                    <option>Canal</option>
+                </select>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-3">
+                <label for="dataDaConsulta">Data:<span class="text-danger">*</span></label>
+                <input name="dataDaConsulta" type="date" class="form-control" value="{{formatDate cadConsulta.dataDaConsulta}}">
+            </div>
+            <div class="col-md-2">
+                <label for="turno">Turno:<span class="text-danger">*</span></label>
+                <select name="turno" id="turno" class="form-control" value="{{cadConsulta.turno}}">
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label for="hora">Hora:<span class="text-danger">*</span></label>
+                <input name="hora" type="time" class="form-control" value="{{cadConsulta.hora}}">
+            </div>
+            <div class="col-md-5">
+                <label for="profissional">Dr(a):<span class="text-danger">*</span></label>
+                <select name="profissional" id="profissional" class="form-control" value="{{cadConsulta.profissional}}">
+                    <option>Lorhan Lopes</option>
+                    <option>Victor Albuquerque</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-5">
+                <label for="observacao">Observação:</label>
+                <input type="text" name="observacao" class="form-control" value="{{cadConsulta.observacao}}">
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn-formulario">Salvar</button>
+    </form>
+</div>

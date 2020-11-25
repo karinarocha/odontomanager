@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Cadastro de Serviço</h1>
+    <br>
+    <form action="/add-cadServico" method="POST">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="nomeServico">Tipo de Serviço:<span class="text-danger">*</span></label>
+                <input name="nomeServico" id="nomeServico" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label for="descricao">Descrição:</label>
+                <input name="descricao" id="descricao" class="form-control">
+            </div>
+            <div class="col-md-2">
+                <label for="valor">Valor:<span class="text-danger">*</span></label>
+                <input name="valor" type="number" step="0.010" class="form-control" required>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn-formulario">Salvar</button>
+    </form>
+</div>
